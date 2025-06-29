@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sanskriti Voyages</title>
+    <link rel="stylesheet" href="./home.css">
+      <script src="home.js" defer></script>
+</head>
+
+<body>
+    <header class="mainmenu sticky">
+        <div class="div-1">
+            <div class="img-div">
+                <img class="img1 logo" src="./svlogo.png" width="50px" height="50px" alt="logo">
+            </div>
+            <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search destination...">
+  <button onclick="searchDestination()"><i class="fa fa-search"></i></button>
+</div>
+            <div>
+                <ul>
+                    <li><a href="home.html"> Home </a></li>
+                    <li><a href="about.html"> About</a></li>
+                    <li><a href="contact.html"> Contact</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                    <li><a href="#category-id">Categories</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="container-carousel">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="././images/charminar.jpeg" alt="Heritage Image India">
+                <img id="slide-2" src="././images/goa.jpeg" alt="Heritage Image India">
+                <img id="slide-3" src="././images/hawa-mahal.jpeg" alt="Heritage Image India">
+                <img id="slide-4" src="././images/Indiagate.jpeg" alt="Heritage Image India">
+                <img id="slide-5" src="././images/kerala2.jpeg" alt="Heritage Image India">
+                <img id="slide-6" src="././images/jaisalmer.jpeg" alt="Heritage Image India">
+                <img id="slide-7" src="././images/taj-mahal.jpeg" alt="Heritage Image India">
+                <img id="slide-8" src="././images/tirupati.jpeg" alt="Heritage Image India">
+                <img id="slide-8" src="././images/rajasthan.jpeg" alt="Heritage Image India">
+                <img id="slide-8" src="././images/lotustemple.jpeg" alt="Heritage Image India">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a>
+                <a href="#slide-7"></a>
+                <a href="#slide-8"></a>
+                <a href="#slide-9"></a>
+                <a href="#slide-10"></a>
+            </div>
+        </div > 
+    
+    </section>
+
+      <!-- ########## Section Styling ############-->
+        <section id="category-id">
+            <div class="container-cat">
+               <div class="filter_buttons">
+                 <button class = "active" data-name="all">Show all</button>
+                 <button  data-name="heritage">Heritage</button>
+                 <button  data-name="nature">Nature</button>
+                 <button  data-name="food">Food</button>
+               </div>
+
+            <!-- Image cards -->
+            
+            <div class="filterable_cards">
+
+                <!-- Heritage Images -->
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/her1.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/her2.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/her3.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/her4.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/her5.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/her6.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                        <div class="card" data-name="heritage">
+                    <img src="./images/lotustemple.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="heritage">
+                    <img src="./images/jaisalmer.jpeg" alt="heritage">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+
+                  <!-- Food Images -->
+
+
+                   <div class="card" data-name="food">
+                    <img src="./images/food1.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food2.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food3.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food4.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food5.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food6.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food7.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="food">
+                    <img src="./images/food8.jpeg" alt="food">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+
+                  <!-- Nature Images -->
+
+
+                   <div class="card" data-name="nature">
+                    <img src="./images/nature1.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/nature2.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/nature3.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/nature4.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/nature5.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/nature6.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/nature7.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                        <div class="card" data-name="nature">
+                    <img src="./images/rajasthan.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="./images/kerala2.jpeg" alt="nature">
+                    <div class="card_body">
+                        <h6 class="card_title">Hampi</h6>
+                        <p class="card_text">Lorem ipsum dolor sit amet. </p>
+                    </div>
+                </div>
+                
+
+            </div>
+            </div>
+        </section>
+    <!-- ######### Expandable Cards Styling ########### -->
+     <section> 
+        <div class="container-expand">
+            <div class="card-expand teal-color">
+                 <div class="imgbox-expand ">
+                    <img src="./images/expand1.jpeg" alt="image">
+                 </div>
+                <div class="content-expand ">
+                    <h2>Munnar</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, nam.</p>
+                    <a href="./resorts/munnar.html" target="_blank">Read More</a>
+  
+                </div>
+            </div>
+
+            <div class="card-expand teal-color">
+                 <div class="imgbox-expand ">
+                    <img src="./images/expand2.jpeg" alt="image">
+                 </div>
+                <div class="content-expand ">
+                    <h2>Bangalore</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem.</p>
+                    <a href="./resorts/bangalore.html">Read More</a>
+
+                </div>
+            </div>
+            
+            <div class="card-expand teal-color">
+                 <div class="imgbox-expand ">
+                    <img src="./images/expand3.jpeg" alt="image">
+                 </div>
+                <div class="content-expand ">
+                    <h2>Kerala</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem.</p>
+                    <a href="./resorts/kerala.html">Read More</a>
+
+                </div>
+            </div>
+
+            <div class="card-expand teal-color">
+                 <div class="imgbox-expand ">
+                    <img src="./images/nature3.jpeg" alt="image">
+                 </div>
+                <div class="content-expand ">
+                    <h2>Andaman & Nicobar</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem.</p>
+                    <a href="./resorts/an.html">Read More</a>
+
+                </div>
+            </div>
+
+            <div class="card-expand teal-color">
+                 <div class="imgbox-expand ">
+                    <img src="./images/her6.jpeg" alt="image">
+                 </div>
+                <div class="content-expand ">
+                    <h2>Goa</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem.</p>
+                    <a href="./resorts/goa.html">Read More</a>
+
+                </div>
+            </div>
+
+            <div class="card-expand teal-color">
+                 <div class="imgbox-expand ">
+                    <img src="./images/her5.jpeg" alt="image">
+                 </div>
+                <div class="content-expand ">
+                    <h2>Odisha</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem.</p>
+                    <a href="./resorts/odisha.html">Read More</a>
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+    <!-- ######### Footer Styling ########### -->
+     <footer>
+         <div class="footer-container">
+            <div class="sec aboutus">
+                <h2> About Us</h2>
+                <p>At Sanskriti Voyages, we believe travel is not just about destinations—it's about experiences.
+We curate personalized journeys that blend adventure, culture, and comfort.
+Whether you're dreaming of mountains, beaches, or heritage trails, we've got you covered.
+Our mission is to make every trip memorable and hassle-free.
+Let us be your trusted companion in exploring the world!</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
+                    <li><a href="#"><i class="white fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="white fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="white fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="tandc.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>View</h2>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="book.html">book now</a></li>
+            
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span><p><a href="tel:9434511190">9434511190</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span><p><a href="mailto : knowmore@gmail.com">knowmore@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+         </div>
+     </footer>
+     <div class="copyrightText">
+        <p>Copyright 2025 Sanskriti Voyages. All Rights Reserved 2025</p>
+     </div>
+</body>
+
+</html>

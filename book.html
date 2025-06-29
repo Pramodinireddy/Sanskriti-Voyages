@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="./book.css">
+    
+    <title>Categories</title>
+</head>
+<body>
+    <!--########## Header Styling ###########-->
+     <header class="mainmenu sticky">
+        <div class="div-1">
+            <div class="img-div">
+                <img class="img1 logo" src="./svlogo.png" width="50px" height="50px" alt="logo">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="home.html"> Home </a></li>
+                    <li><a href="about.html"> About</a></li>
+                    <li><a href="contact.html"> Contact</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                    <li><a href="#category-id">Categories</a></li>
+                </ul>
+            </div>
+        </div>
+        </header>
+ <!--########## Design Styling ###########-->
+ <div>
+ <div class="main-container">
+    <div class="filter-sidebar">
+        <h3>Filter Options</h3>
+        <div class="filter-group">
+            <strong>Rating</strong>
+            <label><input type="checkbox" class="filter-rating" value="5"> 5 Star</label>
+            <label><input type="checkbox" class="filter-rating" value="4"> 4 Star</label>
+            <label><input type="checkbox" class="filter-rating" value="3"> 3 Star</label>
+        </div>
+        <div class="filter-group">
+            <strong>Destination</strong>
+            <label><input type="checkbox" class="filter-destination" value="Heritage"> Heritage</label>
+            <label><input type="checkbox" class="filter-destination" value="Nature"> Nature</label>
+            <label><input type="checkbox" class="filter-destination" value="Mountain"> Mountain</label>
+        </div>
+        <div class="filter-group">
+            <strong>Hotel Type</strong>
+            <label><input type="checkbox" class="filter-type" value="Resort"> Resort</label>
+            <label><input type="checkbox" class="filter-type" value="Villa"> Villa</label>
+            <label><input type="checkbox" class="filter-type" value="Homestay"> Homestay</label>
+        </div>
+        <div class="filter-group">
+            <strong>Price Range (INR)</strong>
+            <label><input type="checkbox" class="filter-price" value="5000+"> 5000+</label>
+            <label><input type="checkbox" class="filter-price" value="5000-6000"> 5000-6000</label>
+            <label><input type="checkbox" class="filter-price" value="6000-15000"> 6000-15000</label>
+            <label><input type="checkbox" class="filter-price" value="15000-25000"> 15000-25000</label>
+            <label><input type="checkbox" class="filter-price" value="25000+"> 25000+</label>
+        </div>
+        <button class="apply-btn" onclick="applyFilters()">Apply Filters</button>
+    </div>
+    <div class="destination-display" id="destinationDisplay"></div>
+</div>
+    <!-- ######### Footer Styling ########### -->
+     <footer>
+         <div class="footer-container">
+            <div class="sec aboutus">
+                <h2> About Us</h2>
+                <p>At Sanskriti Voyages, we believe travel is not just about destinations—it's about experiences.
+We curate personalized journeys that blend adventure, culture, and comfort.
+Whether you're dreaming of mountains, beaches, or heritage trails, we've got you covered.
+Our mission is to make every trip memorable and hassle-free.
+Let us be your trusted companion in exploring the world!</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="white fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="white fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="white fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="white fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Shop</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span><p><a href="tel:9434511190">9434511190</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span><p><a href="mailto : knowmore@gmail.com">knowmore@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+         </div>
+     </footer>
+     <div class="copyrightText">
+        <p>Copyright 2025 Sanskriti Voyages. All Rights Reserved 2025</p>
+     </div>
+
+
+
+ <!-- ######### Script Styling ########### -->
+<script>
+const destinations = [
+    { img: './images/loc1.jpeg', name: 'Green Valley Resort', rating: '5', dest: 'Nature', type: 'Resort', price: 30000, link: 'resorts/gv.html' },
+    { img: './images/loc2.jpeg', name: 'Snow Peak Villa', rating: '4', dest: 'Mountain', type: 'Villa', price: 12000, link: 'resorts/spvilla.html' },
+    { img: './images/loc3.jpeg', name: 'Royal Haveli', rating: '3', dest: 'Heritage', type: 'Homestay', price: 5500, link: 'resorts/rv.html' },
+    { img: './images/loc4.jpeg', name: 'Majestic Hills', rating: '5', dest: 'Mountain', type: 'Resort', price: 27000, link: 'resorts/mhills.html' },
+    { img: './images/loc5.jpeg', name: 'Forest Edge Homestay', rating: '4', dest: 'Nature', type: 'Homestay', price: 6000, link: 'resorts/feh.html' },
+    { img: './images/loc6.jpeg', name: 'Old Fort Villa', rating: '4', dest: 'Heritage', type: 'Villa', price: 15000, link: 'resorts/ofv.html' },
+    { img: './images/loc7.jpeg', name: 'Nature Bliss Villa', rating: '3', dest: 'Nature', type: 'Villa', price: 8000, link: 'resorts/nbv.html' },
+    { img: './images/loc8.jpeg', name: 'Alpine Homestay', rating: '5', dest: 'Mountain', type: 'Homestay', price: 25000, link: 'resorts/ah.html' },
+    { img: './images/loc9.jpeg', name: 'Temple View Resort', rating: '4', dest: 'Heritage', type: 'Resort', price: 20000, link: 'resorts/tvr.html' },
+    { img: './images/loc10.jpeg', name: 'Lakeside Resort', rating: '5', dest: 'Nature', type: 'Resort', price: 27000, link: 'resorts/lr.html' },
+    { img: './images/loc11.jpeg', name: 'Snowtop Retreat', rating: '3', dest: 'Mountain', type: 'Resort', price: 5000, link: 'resorts/sr.html' },
+    { img: './images/loc12.jpeg', name: 'Historic Stay', rating: '5', dest: 'Heritage', type: 'Homestay', price: 17000, link: 'resorts/hstay.html' }
+];
+const container = document.getElementById('destinationDisplay');
+function renderDestinations(data) {
+    container.innerHTML = data.map(d => `
+        <div class="destination-card">
+            <div class="image-box" style="background-image: url('${d.img}')"></div>
+            <div class="destination-info">
+                <h4>${d.name}</h4>
+                <p>${d.rating} Star ${d.type} in ${d.dest} zone.</p>
+            </div>
+            <div class="destination-meta">
+                <span>${d.rating}★</span>
+                <span>₹${d.price}</span>
+                <a href="${d.link}"><button class="book-btn">Book</button></a>
+            </div>
+        </div>`).join('');
+}
+renderDestinations(destinations);
+
+function applyFilters() {
+    const ratings = Array.from(document.querySelectorAll('.filter-rating:checked')).map(el => el.value);
+    const destinationsFilter = Array.from(document.querySelectorAll('.filter-destination:checked')).map(el => el.value);
+    const types = Array.from(document.querySelectorAll('.filter-type:checked')).map(el => el.value);
+    const prices = Array.from(document.querySelectorAll('.filter-price:checked')).map(el => el.value);
+
+    const filtered = destinations.filter(card => {
+        const matchesRating = !ratings.length || ratings.includes(card.rating);
+        const matchesDestination = !destinationsFilter.length || destinationsFilter.includes(card.dest);
+        const matchesType = !types.length || types.includes(card.type);
+        const matchesPrice = !prices.length || prices.some(range => {
+            if (range === "5000+") return card.price >= 5000;
+            if (range === "5000-6000") return card.price >= 5000 && card.price <= 6000;
+            if (range === "6000-15000") return card.price >= 6000 && card.price <= 15000;
+            if (range === "15000-25000") return card.price >= 15000 && card.price <= 25000;
+            if (range === "25000+") return card.price > 25000;
+            return false;
+        });
+        return matchesRating && matchesDestination && matchesType && matchesPrice;
+    });
+
+    renderDestinations(filtered);
+}
+</script>
+</body> 
+</html>

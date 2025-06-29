@@ -1,0 +1,1167 @@
+/* GENERAL STYLING */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+/* ################# Utility for Icons #################### */
+.teal-color{
+    color:#2f4156;
+}
+/* ############ Header Bar Styling ##########*/
+.mainmenu {
+    background-color: #2f4156;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures header stays on top */
+}
+
+.mainmenu .div-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.img1 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left:50px;
+    padding:1px;
+}
+
+.mainmenu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.mainmenu ul li {
+    display: inline-block;
+    margin-left: 20px;
+ 
+}
+
+.mainmenu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.mainmenu ul li a:hover {
+    color:#c8d9e6;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+}
+
+.search-bar input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background-color: #ffffff;
+    border: none;
+    color: #2f4156;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #c8d9e6;
+}
+
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+/* ############ Carousel Styling ##########*/
+
+.container-carousel{
+    padding:20px; 
+}
+
+.slider-wrapper{
+    position:relative;
+    width:100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin:0 ;
+    overflow:hidden;
+}
+
+.slider{
+    display: flex;
+    width:100%;
+    max-height: 500px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior:smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem #2f4156;
+    border-radius:0.5rem;
+    aspect-ratio: 16/10;
+    
+} 
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit:cover;
+    height:100%;
+    width:100%;
+}
+
+.slider-nav{
+    display:flex;
+    column-gap:1rem;
+    position: absolute;
+    bottom:1.25rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:1;
+}
+
+.slider-nav a{
+    width:0.5rem;
+    height:0.5rem;
+    border-radius:50%;
+    background-color: #fff;
+    opacity:0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+   opacity:1; 
+}
+
+
+
+
+/*############ Section styling ############# */
+
+.container-cat{
+    position:relative;
+    max-width: 1350px;
+    height:650px;
+    width:100%;
+    padding:60px;
+    margin:60px auto;
+    border: 1px solid #c8d9e6;
+    background-color: #c8d9e6; /* Soft background */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #2f4156;
+}
+
+.filter_buttons{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+    gap:15px;
+    margin-bottom:15px;
+    
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+    background: #fff;
+    border:none;
+    border-radius: 6px;
+    cursor:pointer;
+    box-shadow:0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+button.active{
+    background: #2f4156;
+    color: #fff;
+}
+
+/* ############### Image_card Styling ############# */
+/*
+.filterable_cards{
+   display: flex;
+   margin-top: 25px; 
+   gap:30px;
+   flex-wrap:wrap;
+}
+*/
+
+
+.filterable_cards {
+    max-height: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px;
+   
+}
+
+
+.filterable_cards .card {
+    min-width: 250px;
+    text-align: center;
+    background-color: #2f4156;
+    display: flex;
+    flex-direction: column;
+     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.filterable_cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.card{
+    flex-grow: 1;
+    flex-basis: 300px;
+    background-color: #2f4156; 
+    padding:10px;
+    border-radius:20px;
+    box-shadow:0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.card.hide{
+    display:none;
+}
+.card img{
+    width: 100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px 10px 0 0;
+}
+
+.card_body{
+    padding:30px 30px 30px;
+}
+
+.card_title{
+    font-size: 20px;
+    font-weight: 500;
+    color:#fff;
+}
+
+.card_text{
+    font-size: 20px;
+    font-weight: 500;
+    color:#fff;
+}
+/* Privacy  Policy */
+
+#section ,.container{
+    max-width:1200px;
+    width:90%;
+    margin:auto;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+.privacy li{
+    font-size:1.5rem;
+    padding-bottom:1rem;
+    list-style-type:none;
+    
+
+}
+
+.all-3{
+    font-size:2rem;
+    text-align:left;
+    font-weighT:50;
+    padding-top:60px;
+    color:#2f4156;
+     border: 1px solid #c8d9e6;
+    background-color: #c8d9e6; /* Soft background */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #2f4156;
+    padding-left:40px;
+    padding-right:40px;
+    
+}
+
+.h1-all-3{
+    text-align:center;
+    padding-bottom:2rem;
+}
+
+/* ################# Expandable Cards styling #################### */
+.container-expand{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:100px 50px;
+    padding: 100px 50px;
+}
+
+.container-expand .card-expand{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #c8d9e6;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px #2f4156;
+}
+
+.container-expand .card-expand:hover{
+    height:400px;
+}
+
+.container-expand .card-expand .imgbox-expand{
+    position: absolute;
+    top:20px;
+    width:300px;
+    height:220px;
+    background: #2f4156;
+    border-radius:12px;
+    overflow: hidden;
+    transition:0.5s; 
+} 
+
+.container-expand .card-expand:hover .imgbox-expand{
+    top:-100px;
+    scale:0.75;
+    box-shadow:0 5px 5px #2f4156;
+}
+
+.container-expand .card-expand .imgbox-expand img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.container-expand .card-expand .content-expand{
+    position:absolute;
+    top:252px;
+    width:100%;
+    height:27px;
+    padding:0 30px;
+    overflow: hidden;
+    text-align: center; 
+}
+
+.container-expand .card-expand:hover .content-expand{
+    top:150px;
+    height:250px;
+}
+
+.container-expand .card-expand .content-expand h2{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.container-expand .card-expand .content-expand p{
+    color:#2f4156;
+}
+
+.container-expand .card-expand .content-expand a{
+   position: relative;
+   top:15px;
+   display:inline-block;
+   padding:12px 25px;
+   background-color: #2f4156; 
+   color:#c8d9e6;
+   font-weight: 500;
+   text-decoration: none;
+   border-radius: 8px;
+}
+
+
+/* ################# Contact Us styling #################### */
+
+.contact-us{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/contact.jpg);
+    background-size: cover;
+}
+
+.contact-us .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-us .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact-us .content p{
+
+    font-weight: 300;
+    color: #fff;
+}
+
+.container-contact{
+    width:100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container-contact .contactinfo{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-contact .contactinfo .box-contact{
+    position: relative;
+    padding:20px 0;
+    display: flex;
+}
+
+.container-contact .contactinfo .box-contact .icon-contact{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container-contact .contactinfo .box-contact .text-contact{
+    display: flex;
+    flex-direction:column;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container-contact .contactinfo .box-contact .text-contact h3{
+    font-weight: 500;
+    color: #fff;
+}
+
+.contactform{
+    width:40%;
+    padding: 40px;
+    background: #fff;
+    border:1px solid #fff;
+    box-shadow: 2px 4px 12px #2f4156;;
+}
+
+.contactform h2{
+    font-size: 30px;
+    color: #2f4156;
+    font-weight: 500;
+}
+
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea
+{
+    width: 100%;
+    padding:5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border:none;
+    border-bottom: 2px solid #2f4156;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputbox  span{
+    position: absolute;
+    left:0;
+    padding:5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#2f4156;
+}
+
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span{
+   color:#e91e63;
+   font-size: 12px;
+   transform: translateY(-20px);
+}
+
+.contactform .inputbox input[type="submit"]{
+   width: 100px;
+   background: #2f4156;
+   color:#fff;
+   border:none;
+   cursor:pointer;
+   padding:10px;
+   font-size: 18px;
+}
+
+
+/* ################# Footer styling #################### */
+
+footer{
+    position: relative;
+    width:100%;
+    height:auto;
+    padding: 50px 100px;
+    background: #2f4156;
+}
+
+footer .footer-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    grid-gap:20px;
+}
+
+footer .footer-container .sec h2{
+    position: relative;
+    color:white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .footer-container .sec p{
+   color:white; 
+}
+
+footer .footer-container .sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+}
+
+footer .footer-container .sci li{
+    list-style: none;
+}
+
+footer .footer-container .sci li a{
+    display:inline-block;
+    width:360px;
+    height:36px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+
+footer .footer-container .sci li a i{
+    color:#fff;
+    font-size: 20px;
+}
+
+footer .footer-container .quicklinks{
+    position: relative;
+
+}
+
+footer .footer-container .quicklinks ul li{
+    list-style: none;
+}
+
+footer .footer-container .quicklinks ul li a{
+    color:#fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .footer-container .contact .info{
+    position: relative;
+}
+
+footer .footer-container .contact .info li{
+    display: grid;
+    grid-template-columns:30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .footer-container .contact .info li span{
+    color:#fff;
+    font-size: 20px;
+
+}
+
+footer .footer-container .contact .info li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.copyrightText{
+   width:100%;
+   background: #2f4156; 
+   padding:20px 100px 30px;
+   text-align: center;
+   color:#fff;
+   border-top : 1px solid #fff;
+}
+
+
+
+/* ########## Resorts Styling #################*/
+/* =============== Container =============== */
+.container-resort {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =============== Hero Image =============== */
+.resort-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* =============== Resort Name =============== */
+.resort-name {
+    text-align: center;
+    font-size: 2rem;
+    color: #2b2b2b;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =============== Icon Section =============== */
+.resort-icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: #c8d9e6;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.resort-icon div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resort-icon div img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.resort-icon div span {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* =============== Theory + Image =============== */
+.resort-theory1,
+.resort-theory2-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #c8d9e6;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    padding: 25px 20px;
+    margin: 40px 20px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.resort-theory1 .theory,
+.resort-theory1 .res-image,
+.resort-theory2-wrapper .theory,
+.resort-theory2-wrapper .res-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.theory p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    padding: 10px;
+}
+
+.res-image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/*############ Expandable Card's Individual Data Page CSS #########*/
+
+/* ====== Munnar Section Styling ====== */
+.destination-section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.destination-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 6px 15px #1e3d59;
+    margin-bottom: 30px;
+}
+
+.destination-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom-left-radius: 80% 10%;
+    border-bottom-right-radius: 80% 10%;
+}
+
+.destination-text-container {
+    background-color: #f9f9f9;
+    padding: 30px 25px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 6px 15px #1e3d59;
+    border: 1px solid #e3e3e3;
+}
+
+.destination-text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #1e3d59;
+    text-align: center;
+}
+
+.destination-text-container p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ########## Frequently Asked Questions Styling ######### */
+
+/* FAQ Section Styling */
+.faq-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  max-width: 1000px;
+  margin:auto;
+  margin-top:30px;
+  margin-bottom:30px;
+  border:1px solid #1e3d59;
+  box-shadow:0 6px 15px #1e3d59;
+  border-radius: 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  border: 1px solid #1e3d59;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #1e3d59;
+  background-color: #fff;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  padding: 0 20px 20px 20px;
+  font-size: 1rem;
+  color: #444;
+  display: none;
+  line-height: 1.6;
+  border-top: 1px solid #c8d9e6;
+}
+
+/* Toggle class when expanded */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Optional hover effect */
+.faq-question:hover {
+  background-color: #c8d9e6;
+}
+
+/* ####################################### Media Queries ################################### */
+
+/* #################### Additional Media Queries #################### */
+
+
+@media (max-width:991px){
+    .contact-us{
+        padding:50px;
+    }
+
+    .container-contact{
+        flex-direction: column;
+    }
+
+     .container-contact .contactinfo{
+        margin-bottom: 40px;
+     }
+
+     .container-contact .contactinfo,
+     .contactform
+     {
+        width:100%;
+     }
+
+
+}
+
+/* Media Query */
+
+@media (max-width:991px){
+    footer{
+        padding:40px;
+    }
+
+    footer .footer-container{
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:20px;
+    }
+
+     .copyrightText{
+        padding:20px 40px 30px;
+     }
+}
+
+@media (max-width: 768px){
+    footer .footer-container{
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:20px;
+    }   
+}
+
+
+/* =============== Responsive Media Queries =============== */
+@media screen and (max-width: 1200px) {
+    .resort-img img {
+        height: 300px;
+    }
+    .res-image img {
+        max-height: 260px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .resort-theory1,
+    .resort-theory2-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resort-theory1 .theory,
+    .resort-theory1 .res-image,
+    .resort-theory2-wrapper .theory,
+    .resort-theory2-wrapper .res-image {
+        max-width: 100%;
+    }
+
+    .resort-img img {
+        height: 270px;
+    }
+
+    .resort-icon {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resort-img img {
+        height: 230px;
+    }
+
+    .resort-name {
+        font-size: 1.5rem;
+    }
+
+    .resort-icon {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .resort-icon div img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .theory p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .res-image img {
+        max-height: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resort-img img {
+        height: 200px;
+    }
+
+    .resort-name {
+        font-size: 1.2rem;
+    }
+
+    .resort-icon {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .resort-icon div img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .resort-icon div span {
+        font-size: 0.8rem;
+    }
+
+    .res-image img {
+        max-height: 180px;
+    }
+
+    .resort-theory1,
+    .resort-theory2-wrapper {
+        padding: 15px;
+    }
+
+    .theory p {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .filter_buttons {
+        justify-content: center;
+    }
+
+    .filterable_cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-expand {
+        gap: 60px 30px;
+        padding: 60px 30px;
+    }
+
+    .container-expand .card-expand {
+        width: 80%;
+        height: auto;
+    }
+
+    .container-expand .card-expand:hover {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter_buttons {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .filterable_cards {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .container-expand {
+        padding: 50px 20px;
+        gap: 40px 20px;
+    }
+
+    .container-expand .card-expand {
+        width: 90%;
+    }
+
+    .container-expand .card-expand .imgbox-expand {
+        width: 90%;
+        height: 180px;
+    }
+
+    .container-expand .card-expand .content-expand h2 {
+        font-size: 1.3em;
+    }
+
+    .contact-us {
+        padding: 30px 20px;
+    }
+
+    .contactform {
+        padding: 20px;
+    }
+
+    .contactform h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card_title,
+    .card_text {
+        font-size: 16px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .container-cat {
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .filter_buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .container-expand {
+        padding: 30px 15px;
+        gap: 30px;
+    }
+
+    .container-expand .card-expand {
+        width: 100%;
+    }
+
+    .container-expand .card-expand .imgbox-expand {
+        height: 160px;
+    }
+
+    .container-expand .card-expand .content-expand h2 {
+        font-size: 1.2em;
+    }
+
+    .container-expand .card-expand .content-expand p {
+        font-size: 0.95rem;
+    }
+
+    .contact-us .content h2 {
+        font-size: 28px;
+    }
+
+    .contactform h2 {
+        font-size: 22px;
+    }
+
+    .privacy li {
+        font-size: 1.2rem;
+    }
+
+    .all-3 {
+        font-size: 1.5rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .faq-answer {
+        font-size: 0.95rem;
+        padding: 0 15px 15px 15px;
+    }
+}
